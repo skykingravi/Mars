@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>My first three.js app</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars</title>
   <style>
     * {
       margin: 0;
@@ -70,13 +72,14 @@
       renderer.setSize(sizes.width, sizes.height);
     })
 
+    console.log(window.innerWidth/window.innerHeight);
     // Main Loop
     function animate() {
       mars.rotation.y += .001;
       renderer.render(scene, camera);
     }
     renderer.setAnimationLoop(animate);
-    
+
     // Mobiles & Tabs
     if (window.innerWidth/window.innerHeight <= 1) {
       mars.scale.set(.4, .4, .4);
