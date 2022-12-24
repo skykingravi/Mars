@@ -76,10 +76,9 @@
       renderer.render(scene, camera);
     }
     renderer.setAnimationLoop(animate);
-
-    document.body.innerHTML += `<h1 style="position:  fixed; top: 0; left: 0">${window.innerWidth}</h1>`;
+    
     // Mobiles & Tabs
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth/window.innerHeight <= 1) {
       mars.scale.set(.4, .4, .4);
     }
   </script>
